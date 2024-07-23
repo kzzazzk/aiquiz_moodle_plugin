@@ -26,7 +26,6 @@ defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->dirroot . '/course/moodleform_mod.php');
 require_once($CFG->dirroot.'/mod/quiz/mod_form.php');
-require_once($CFG->dirroot.'/mod/quiz/mod_form.php');
 
 
 /**
@@ -53,7 +52,7 @@ class mod_aiquiz_mod_form extends mod_quiz_mod_form {
 
         $mform->addElement('date_time_selector', 'assignmentclose', get_string('assignmentclose', 'aiquiz'),
             self::$datefieldoptions);
-
+        $mform->addElement('textarea', 'yourcontext', get_string('yourcontext', 'aiquiz'));
         parent::definition();
 
     }
