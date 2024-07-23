@@ -50,11 +50,10 @@ $string['aiquiz:view'] = 'Ability to see that the AI quiz exists, and the basic 
 about it, for example the start date and time limit.';
 $string['aiquiz:addinstance'] = 'Ability to add a new AI quiz to the course.';
 $string['aiquiz:attempt'] = 'Ability to do the AI quiz as a student.';
-$string['aiquiz:reviewmyattempts'] = 'Ability for a student to review their previous attempts. 
-Review by teachers is controlled by mod/aiquiz:viewreports.';
+$string['aiquiz:reviewmyattempts'] = 'Ability for a student to review their previous attempts.';
 $string['aiquiz:manage'] = 'Edit the AI quiz settings, add and remove questions.';
 $string['aiquiz:manageoverrides'] = 'Edit the AI quiz overrides.';
-$string['aiquiz:viewoverrides'] = 'View the AI quiz overrides (only checked for users who dont have mod/aiquiz:manageoverrides.';
+$string['aiquiz:viewoverrides'] = 'View the AI quiz overrides';
 $string['aiquiz:preview'] = 'Preview the AI quiz.';
 $string['aiquiz:gradequiz'] = 'Manually grade and comment on student attempts at a question.';
 $string['aiquiz:regrade'] = 'Regrade quizzes.';
