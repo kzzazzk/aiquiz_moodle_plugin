@@ -117,7 +117,7 @@ $capabilities = [
     ],
 
     // Manually grade and comment on student attempts at a question.
-    "mod/aiquiz:grade" => [
+    "mod/aiquiz:gradequiz" => [
         "riskbitmask" => RISK_SPAM | RISK_XSS,
         "captype" => "write",
         "contextlevel" => CONTEXT_MODULE,
@@ -137,7 +137,7 @@ $capabilities = [
                 "editingteacher" => CAP_ALLOW,
                 "manager" => CAP_ALLOW,
             ],
-            "clonepermissionsfrom" => "mod/aiquiz:grade",
+            "clonepermissionsfrom" => "mod/aiquiz:gradequiz",
         ],
 
         // View the AI quiz reports.

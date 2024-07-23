@@ -40,8 +40,32 @@ Quizzes may be used
 * As practice tests tailored to student submissions
 * To provide immediate and specific feedback on performance
 * For customized self-assessment';
+
 $string['assignmenttiming'] = 'Assignment Submission Timing';
 $string['assignmentopen'] = 'Open assignment submissions';
 $string['assignmentclose'] = 'Close assignment submissions';
 $string['yourcontext'] = 'Context of the knowledge needed for the accomplishment of the test';
+
+$string['aiquiz:view'] = 'Ability to see that the AI quiz exists, and the basic information 
+about it, for example the start date and time limit.';
+$string['aiquiz:addinstance'] = 'Ability to add a new AI quiz to the course.';
+$string['aiquiz:attempt'] = 'Ability to do the AI quiz as a student.';
+$string['aiquiz:reviewmyattempts'] = 'Ability for a student to review their previous attempts. 
+Review by teachers is controlled by mod/aiquiz:viewreports.';
+$string['aiquiz:manage'] = 'Edit the AI quiz settings, add and remove questions.';
+$string['aiquiz:manageoverrides'] = 'Edit the AI quiz overrides.';
+$string['aiquiz:viewoverrides'] = 'View the AI quiz overrides (only checked for users who dont have mod/aiquiz:manageoverrides.';
+$string['aiquiz:preview'] = 'Preview the AI quiz.';
+$string['aiquiz:gradequiz'] = 'Manually grade and comment on student attempts at a question.';
+$string['aiquiz:regrade'] = 'Regrade quizzes.';
+$string['aiquiz:viewreports'] = 'View the AI quiz reports.';
+$string['aiquiz:deleteattempts'] = 'Delete attempts using the overview report.';
+$string['aiquiz:ignoretimelimits'] = 'Do not have the time limit imposed. Used for accessibility legislation compliance.';
+$string['aiquiz:emailconfirmsubmission'] = 'Receive a confirmation message of own AI quiz submission.';
+$string['aiquiz:emailnotifysubmission'] = 'Receive a notification message of other peoples AI quiz submissions.';
+$string['aiquiz:emailwarnoverdue'] = 'Receive a notification message when an AI quiz attempt becomes overdue.';
+$string['emailnotifyattemptgraded'] = 'Receive a notification message when an AI quiz attempt manual graded.';
+$string['aiquiz:submitassignment'] = 'Ability to submit an assignment as a student.';
+$string['aiquiz:gradeassignment'] = 'Manually grade and comment on student assignments.';
+$string['aiquiz:exportownsubmission'] = 'Ability to export their own submitted assignments';
 
