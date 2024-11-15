@@ -26,6 +26,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'AI Quiz';
+$string['modulename'] = 'AI Quiz';
+$string['modulenameplural'] = 'AI Quizzes';
 $string['modulename_help'] = 'The AI Quiz plugin enables teachers to create personalized quizzes with AI-generated questions based on student-uploaded content. It includes all standard quiz features plus:
 
 * A long-text input for specifying required knowledge
@@ -41,10 +43,11 @@ Quizzes may be used
 * To provide immediate and specific feedback on performance
 * For customized self-assessment';
 
-$string['assignmenttiming'] = 'Assignment Submission Timing';
-$string['assignmentopen'] = 'Open assignment submissions';
-$string['assignmentclose'] = 'Close assignment submissions';
-$string['yourcontext'] = 'Context of the knowledge needed for the accomplishment of the test';
+$string['assignmenttiming'] = 'Task assignment';
+$string['assignmentname'] = 'Task name';
+$string['noselectionstring'] = 'No assignment selected';
+$string['assignmentselectionplaceholder'] = 'Select an assignment';
+$string['requiredassignment'] = 'You must choose an assignment to generate the AI Quiz';
 
 $string['aiquiz:view'] = 'Ability to see that the AI quiz exists, and the basic information 
 about it, for example the start date and time limit.';

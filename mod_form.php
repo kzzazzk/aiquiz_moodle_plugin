@@ -40,27 +40,33 @@ class mod_aiquiz_mod_form extends mod_quiz_mod_form {
      * Defines forms elements
      */
     public function definition() {
+        global $DB;
+
         $mform = $this->_form;
-
-        // Add assignment submission.
+        $assignments = array(); // Add an empty default option.
         $mform->addElement('header', 'assignmenttiming', get_string('assignmenttiming', 'aiquiz'));
+        $elements = $DB->get_records('assign');
+        $options = array(
+            'noselectionstring' => get_string('noselectionstring', 'aiquiz'),
+            'placeholder' => get_string('assignmentselectionplaceholder', 'aiquiz'),
+            'minimumInputLength' => 1,
+        );
+        foreach ($elements as $element) {
+            $assignments[$element->id] = $element->name;
+        }
 
-        // Open and close dates for assignments.
-        $mform->addElement('date_time_selector', 'assignmentopen', get_string('assignmentopen', 'aiquiz'),
-            self::$datefieldoptions);
-        $mform->addHelpButton('assignmentopen', 'assignmentopenclose', 'aiquiz');
+        $mform->addElement('autocomplete', 'assignmentname', get_string('assignmentname', 'aiquiz'), $assignments, $options);
+        $mform->addRule('assignmentname', get_string('requiredassignment', 'aiquiz'), 'required', null, 'client');
 
-        $mform->addElement('date_time_selector', 'assignmentclose', get_string('assignmentclose', 'aiquiz'),
-            self::$datefieldoptions);
-        $mform->addElement('textarea', 'yourcontext', get_string('yourcontext', 'aiquiz'));
         parent::definition();
-
     }
+
     /**
      * Defines form behaviour after being defined
      */
     public function definition_after_data() {
         parent::definition_after_data();
+
         $mform = $this->_form;
 
         $general = $mform->getElement('general');
@@ -76,6 +82,7 @@ class mod_aiquiz_mod_form extends mod_quiz_mod_form {
         $mform->insertElementBefore($introeditor, 'assignmenttiming');
 
         $mform->getElement('timing')->setValue('Quiz Timing');
+
     }
 
 }
